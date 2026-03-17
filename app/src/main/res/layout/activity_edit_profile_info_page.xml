@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:padding="16dp"
+    tools:context=".Edit_Profile_Info_Page">
+
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edit Profile Info"
+            android:textSize="20sp"
+            android:textColor="#2A9D8F"
+            android:gravity="center" />
+
+        <ImageButton
+            android:id="@+id/ibExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Exit"
+            android:padding="8dp"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profileImageLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/ivProfilePreview"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/profile_pic_default"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/profile_image_border"
+            android:contentDescription="Profile Image Preview" />
+
+        <Button
+            android:id="@+id/btnSelectImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Image"
+            android:backgroundTint="#264653"
+            android:textColor="#FFFFFF"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="8dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/inputsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:divider="?android:attr/dividerHorizontal"
+        android:showDividers="middle"
+        android:dividerPadding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/profileImageLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:textSize="16sp"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/etFullName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Current Name Here"
+                android:background="@drawable/edittext_background"
+                android:paddingHorizontal="12dp"
+                android:textColor="#000"
+                android:textColorHint="#888"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email Address"
+                android:textSize="16sp"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/etEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Current Email Here"
+                android:background="@drawable/edittext_background"
+                android:paddingHorizontal="12dp"
+                android:inputType="textEmailAddress"
+                android:textColor="#000"
+                android:textColorHint="#888" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone Number"
+                android:textSize="16sp"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Current Phone Number Here"
+                android:background="@drawable/edittext_background"
+                android:paddingHorizontal="12dp"
+                android:inputType="phone"
+                android:textColor="#000"
+                android:textColorHint="#888" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="16sp"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Current Password Here"
+                android:background="@drawable/edittext_background"
+                android:paddingHorizontal="12dp"
+                android:inputType="textPassword"
+                android:textColor="#000"
+                android:textColorHint="#888" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnSaveProfileInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Save Profile Info"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2A9D8F"
+        android:layout_marginBottom="20dp"
+        android:paddingVertical="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

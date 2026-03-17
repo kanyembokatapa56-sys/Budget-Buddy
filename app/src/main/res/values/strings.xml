@@ -1,0 +1,54 @@
+<resources>
+
+    <string name="app_name">PROG7313_P2_V2</string>
+
+
+    <string name="budget_settings">Budget Settings</string>
+    <string name="budget">Budget</string>
+    <string name="savings_goal">Savings Goal</string>
+    <string name="debt_goal">Debt Goal</string>
+    <string name="categories">Categories</string>
+    <string name="edit_categories">Edit Categories</string>
+
+
+    <string-array name="category_colors">
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Yellow</item>
+        <item>Orange</item>
+        <item>Purple</item>
+    </string-array>
+
+    <string-array name="transaction_types">
+        <item>Income</item>
+        <item>Expense</item>
+    </string-array>
+
+
+    <style name="FormLabel">
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">6dp</item>
+    </style>
+
+    <style name="TextInputField">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/edittext_background</item>
+    </style>
+
+    <style name="SettingsButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:backgroundTint">#FFFFFF</item>
+        <item name="android:textColor">#007ACC</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "858076928951",
+    "project_id": "prog7313-p2-v2",
+    "storage_bucket": "prog7313-p2-v2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858076928951:android:18aa732ef8c3b099bce632",
+        "android_client_info": {
+          "package_name": "com.example.prog7313_p2_v2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_vU4pcH_WupNlai-YtY5fwULrbc4l3Dc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

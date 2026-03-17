@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    tools:context=".Add_Transaction_Page">
+
+    <ImageView
+        android:id="@+id/imgExitButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Add Transaction"
+        android:textColor="#2A9D8F"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgExitButton"
+        app:layout_constraintHorizontal_bias="0.498" />
+
+    <ScrollView
+        android:id="@+id/scrollContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/textView23"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingTop="10dp">
+
+            <!-- Spinner Section Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewSpinners"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="#399F9F"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Transaction Type"
+                        android:textSize="16sp"
+                        android:textColor="#000000" />
+
+                    <Spinner
+                        android:id="@+id/spinnerTransactionType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/transaction_types"
+                        android:spinnerMode="dropdown"
+                        android:backgroundTint="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Sub Category"
+                        android:textSize="16sp"
+                        android:textColor="#000000" />
+
+                    <Spinner
+                        android:id="@+id/spinnerSubCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:backgroundTint="#FFFFFF" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Category Selector Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView18"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#264653"
+                app:cardCornerRadius="40dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="0dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.2"
+                        android:text="Category:"
+                        android:textColor="#E9ECEF"
+                        android:textSize="20dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:backgroundTint="#2A9D8F"
+                        app:cardCornerRadius="40dp">
+
+                        <Spinner
+                            android:id="@+id/spCategorySelect"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Amount Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView19"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#399F9F">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="* Amount:"
+                        android:textColor="#000000"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/editTextNumberDecimal2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="R 0 000.00"
+                        android:inputType="numberDecimal"
+                        android:textColor="#000000"
+                        android:textSize="25dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Date of Transaction Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView20"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:backgroundTint="#F8F9FA"
+                android:layout_marginTop="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="* Date of transaction"
+                        android:textColor="#000000"
+                        android:textSize="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:backgroundTint="#D5D5D5"
+                            app:cardCornerRadius="15dp">
+
+                            <EditText
+                                android:id="@+id/editTextNumberSigned"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:hint="DD"
+                                android:maxLength="2"
+                                android:inputType="numberSigned"
+                                android:textColor="#000000"
+                                android:textSize="25dp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#000000"
+                            android:rotation="25" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:backgroundTint="#D5D5D5"
+                            app:cardCornerRadius="15dp">
+
+                            <EditText
+                                android:id="@+id/editTextNumberSigned2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:hint="MM"
+                                android:maxLength="2"
+                                android:inputType="numberSigned"
+                                android:textColor="#000000"
+                                android:textSize="25dp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#000000"
+                            android:rotation="25" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="80dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:backgroundTint="#D5D5D5"
+                            app:cardCornerRadius="15dp">
+
+                            <EditText
+                                android:id="@+id/editTextNumberSigned3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:hint="YYYY"
+                                android:maxLength="4"
+                                android:inputType="numberSigned"
+                                android:textColor="#000000"
+                                android:textSize="25dp" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Notes Card (fixed with image shown properly) -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView21"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#399F9F">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Notes"
+                        android:textColor="#000000"
+                        android:textSize="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <EditText
+                            android:id="@+id/editTextTextMultiLine"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="top|start"
+                            android:inputType="textMultiLine"
+                            android:minLines="4"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:background="@android:color/transparent" />
+
+                        <ImageView
+                            android:id="@+id/imgAddPhoto"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="12dp"
+                            android:contentDescription="Add photo"
+                            app:srcCompat="@android:drawable/ic_menu_add" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Button Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <Button
+                    android:id="@+id/btnAddTransaction"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="Add"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#2A9D8F"
+                    android:layout_marginEnd="16dp"
+                    android:elevation="5dp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <Button
+                    android:id="@+id/btnCancelTransaction"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="Cancel"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#D9534F"
+                    android:elevation="5dp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

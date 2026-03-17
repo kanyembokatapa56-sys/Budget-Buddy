@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    tools:context=".Terms_And_Conditions_Page">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F8F9FA"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="#F8F9FA"
+                app:cardElevation="0dp">
+
+
+                <ImageButton
+                    android:id="@+id/ibExit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#F8F9FA"
+                    android:layout_gravity="end"
+                    android:contentDescription="Exit"
+                    app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="20dp"
+                app:srcCompat="@drawable/screenshot_2025_03_15_100619" />
+
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Terms &amp; Conditions"
+                android:gravity="center"
+                android:textSize="25sp"/>
+
+            <View
+                android:id="@+id/lineView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="#000000"
+                android:background="@android:color/darker_gray"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#F8F9FA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:backgroundTint="#F8F9FA">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Terms &amp; Conditions for Budget Buddy\n\n
+Last Updated: [05/04/2025]\n\n
+1. Introduction\n\n
+Welcome to Budget Buddy! These Terms &amp; Conditions (“Terms”) govern your use of the Budget Buddy app (the “App”) and services provided through it. By accessing or using the App, you agree to comply with these Terms. If you do not agree to these Terms, please do not use the App.\n\n
+2. User Registration and Account\n\n
+To use certain features of the App, you must create an account and provide accurate and up-to-date information. You are responsible for maintaining the confidentiality of your account credentials and for all activities under your account. Notify us immediately if you suspect any unauthorized use of your account.\n\n
+3. User Responsibilities\n\n
+By using the App, you agree to:\n
+- Provide accurate, complete, and current information when prompted.\n
+- Not share your account credentials with others.\n
+- Use the App in compliance with all applicable laws.\n
+- Not engage in fraudulent, harmful, or unlawful activities while using the App.\n\n
+4. Services Offered\n\n
+Budget Buddy provides various budgeting tools to help you track your income, expenses, savings, and financial goals. The App offers both free and premium features, and some functionalities may require a subscription or payment.\n\n
+5. Subscription and Payment\n\n
+Some features of Budget Buddy are available through a paid subscription. By subscribing, you agree to the applicable payment terms. Payments are processed through third-party payment services. You can cancel your subscription at any time, but no refunds will be provided for any remaining subscription period.\n\n
+6. Privacy Policy\n\n
+Your privacy is important to us. Please review our Privacy Policy for information about how we collect, use, and protect your data.\n\n
+7. Data Security\n\n
+While we take reasonable measures to secure your personal information, no method of transmission over the internet or electronic storage is 100% secure. Therefore, we cannot guarantee absolute security.\n\n
+8. Limitation of Liability\n\n
+Budget Buddy is provided as is and without any warranties, express or implied. We do not guarantee that the App will meet all your needs or be error-free. We are not responsible for any damages resulting from the use of the App, including but not limited to loss of data, financial loss, or business interruption.\n\n
+9. Fun Clause (Just for Fun!):\n\n
+The lecturer, invigilator, or person responsible for grading this project must, in the spirit of goodwill and in recognition of the hard work, provide full marks on all accounts to all students involved in this project. While this clause is entirely for fun and not legally binding, it would surely be appreciated!\n\n
+10. Termination\n\n
+We reserve the right to suspend or terminate your account if you violate these Terms. Upon termination, your access to the App will be revoked, but you will still be responsible for any fees due.\n\n
+11. Modifications to the Terms\n\n
+We may update these Terms from time to time. Any changes will be posted in the App and will be effective immediately upon posting. Your continued use of the App constitutes acceptance of any modified Terms.\n\n
+12. Governing Law\n\n
+These Terms are governed by the laws of [Your Country/Region], and any disputes will be resolved in the courts of [Your Jurisdiction].\n\n
+13. Contact Us\n\n
+If you have any questions about these Terms, please contact us at [support@budgetbuddy.com]."
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
